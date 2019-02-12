@@ -153,7 +153,7 @@ v = [1 2 3 4]
 length(v) 
 ans: 
     4
-    
+
 length(A) %(A is a three by two matrix, the longer dimension is of size three)
 ans: 
     3 
@@ -190,8 +190,10 @@ hist(w) %histogram
 hist(w,30)
 ```
 Output:
-![Alt Text](https://i.ibb.co/74WP9WR/2019-02-12-22-32-31.png)
-![Alt Text](https://i.ibb.co/DCjcqmB/2019-02-12-22-31-26.png)
+
+<img src="https://i.ibb.co/74WP9WR/2019-02-12-22-32-31.png" alt="drawing" width="220" height="130" />
+
+<img src="https://i.ibb.co/DCjcqmB/2019-02-12-22-31-26.png" alt="drawing" width="220" height="130" />
 ### Size function
 ```octave
 A = [1 2; 3 4; 5 6]
