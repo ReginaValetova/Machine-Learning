@@ -4,84 +4,184 @@
 ### Arithmetic operations: 
 ```octave
 5 + 6 % addition
+ans = 11
+
 3 - 2 % substraction
+ans = 1
+
 4 * 6 % multiplication 
+ans = 24
+
 1/2 % division
+ans = 0.50000
+
 2^6
+ans = 64
 ```
-Output:
-
-![Alt Text](https://i.ibb.co/3THbNq3/2019-02-12-17-48-14.png)
-
-
 ### Boolean operations:
 ```octave
 1 == 2 & false
+ans = 0
+
 1 ~= 2 #not equal
+ans = 1
+
 1 && 0 %AND
+ans = 0
+
 1 || 0 %OR
+ans = 1
+
 xor(1,0)
+an = 1
 ```
-
-
-Output:
-
-![Alt Text](https://i.ibb.co/vqxPVQq/2019-02-12-22-27-08.png)
 
 ### Matrix operations:
 
  ```octave
 A = [1 2; 3 4; 5 6]
+
 A(3,2)
+ans = 
+    12
+
 A(2,:) % every element along that row
+ans = 
+    3 11
+
 A(:,2) % every element along that column
+ans = 
+    10
+    11
+    12
+
 A([1 3], :)
+ans = 
+    1   10
+    5   12
+
 A(:,2) = [10, 11, 12] % replace operation 
+ans = 
+    1   10
+    3   11
+    5   12
+
 A = [A, [100: 101; 102]]; % append another column vector to right
+ans =
+    1   10  100
+    3   11  101
+    5   12  102
+    
 A(:) % put all elements of A into a single vector 
+ans = 
+    1
+    3
+    5
+    10
+    11
+    12
+    100
+    101
+    102
 ```
-![Alt Text](https://i.ibb.co/ccKHDsL/2019-02-13-1-01-22.png)
 
 ```octave
 B = [11 12 13; 15 16 17; 18 19 20]
 C = [A B] % equai to [A, B]
+ans = 
+    1   2   3   11  12  13
+   10  11  12   15  16  17
+  100 101 101   18  19  20
+
 D = [A; B]
+ans = 
+
+     1     2     3
+    10    11    12
+   100   101   102
+    11    12    13
+    15    16    17
+    18    19    20
 ```
-![Alt Text](https://i.ibb.co/0VMg7xC/2019-02-13-1-08-02.png)
+
+
 
 ```octave
-size(A) % ans: 3 2
-sz = size(A)
-size(sz) % ans: 1 2
-size(A,1) % ans: 3
-size(A,2) % ans: 2
-```
-Output: 
+A = [1 2; 3 4; 5 6];
+B = [11 12; 13 14; 15 16];
+C = [4 5; 6 7];
 
-![Alt Text](https://i.ibb.co/hd79yrz/2019-02-12-23-08-18.png)
+A * C % matrix multiplication
+ans = 
+   16   19
+   36   43
+   56   67
+
+A.*B % multiplicaton by the corresponding elements
+ans = 
+   11   24
+   39   56
+   75   96
+
+A.^2
+ans = 
+    1    4
+    9   16
+   25   36
+
+1 ./ A
+ans =
+   1.00000   0.50000
+   0.33333   0.25000
+   0.20000   0.16667
+
+A'
+ans =
+   1   3   5
+   2   4   6
+
+A < 3
+ans =
+   1   1
+   0   0
+   0   0
+```
 
 
 ```octave
 v = [1 2 3 4]
-length(v) % ans: 4
-length(A) % ans: 3 (A is a three by two matrix, the longer dimension is of size three)
+length(v) 
+ans: 
+    4
+    
+length(A) %(A is a three by two matrix, the longer dimension is of size three)
+ans: 
+    3 
 ```
-Output: 
-
-![Alt Text](https://i.ibb.co/XYpnw23/2019-02-12-23-10-54.png)
 
 ```octave
 v = 1:0.5:2
+ans =
+    1.0000  1.5000  2.0000
+
 v = 1:6
-
+ans = 
+    1   2   3   4   5   6
 ones = ones(2,3)
+ans = 
+    1   1   1
+    1   1   1
+
 zeros = zeros(1,3)
+ans = 
+    0   0   0
+
 Identity = eye(3,3) %Identity matrix
+ans = 
+    1   0   0
+    0   1   0
+    0   0   1
 ```
-
-Output: 
-
-![Alt Text](https://i.ibb.co/5YyJh63/2019-02-12-23-11-06.png)
 
 Also Octave is able to built histograms:
 ```octave
@@ -92,6 +192,28 @@ hist(w,30)
 Output:
 ![Alt Text](https://i.ibb.co/74WP9WR/2019-02-12-22-32-31.png)
 ![Alt Text](https://i.ibb.co/DCjcqmB/2019-02-12-22-31-26.png)
+### Size function
+```octave
+A = [1 2; 3 4; 5 6]
+
+size(A)
+ans = 
+    3   2
+
+sz = size(A);
+
+size(sz)
+ans = 
+    1   2
+
+size(A,1)
+ans = 
+    3
+
+size(A,2)
+ans = 
+    2
+```
 
 ## Moving Data Around
 ### Terminal Directory Commands
