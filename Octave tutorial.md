@@ -32,6 +32,24 @@ Output:
 
  ```octave
 A = [1 2; 3 4; 5 6]
+A(3,2)
+A(2,:) % every element along that row
+A(:,2) % every element along that column
+A([1 3], :)
+A(:,2) = [10, 11, 12] % replace operation 
+A = [A, [100: 101; 102]]; % append another column vector to right
+A(:) % put all elements of A into a single vector 
+```
+![Alt Text](https://i.ibb.co/ccKHDsL/2019-02-13-1-01-22.png)
+
+```octave
+B = [11 12 13; 15 16 17; 18 19 20]
+C = [A B] % equai to [A, B]
+D = [A; B]
+```
+![Alt Text](https://i.ibb.co/0VMg7xC/2019-02-13-1-08-02.png)
+
+```octave
 size(A) % ans: 3 2
 sz = size(A)
 size(sz) % ans: 1 2
@@ -41,6 +59,7 @@ size(A,2) % ans: 2
 Output: 
 
 ![Alt Text](https://i.ibb.co/hd79yrz/2019-02-12-23-08-18.png)
+
 
 ```octave
 v = [1 2 3 4]
@@ -73,3 +92,28 @@ hist(w,30)
 Output:
 ![Alt Text](https://i.ibb.co/74WP9WR/2019-02-12-22-32-31.png)
 ![Alt Text](https://i.ibb.co/DCjcqmB/2019-02-12-22-31-26.png)
+
+## Moving Data Around
+### Terminal Directory Commands
+
+```octave
+pwd %print working directory
+```
+![Alt Text](https://i.ibb.co/QXrkQyp/2019-02-12-23-31-39.png)
+
+```octave
+cd "/Users/vinishko/Desktop" %change directory
+pwd
+```
+![Alt Text](https://i.ibb.co/qWQMhwn/2019-02-12-23-33-15.png)
+
+```octave
+v = [1; 3; 5; 23; 109; 6];
+
+save hello.txt v -ascii
+save hey.txt v
+ls
+```
+![Alt Text](https://i.ibb.co/r6sy7vc/2019-02-13-0-14-29.png)
+
+![Alt Text](https://i.ibb.co/wYLq503/2019-02-13-0-24-58.png)
