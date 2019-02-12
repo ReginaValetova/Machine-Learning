@@ -191,9 +191,9 @@ hist(w,30)
 ```
 Output:
 
-<img src="https://i.ibb.co/74WP9WR/2019-02-12-22-32-31.png" alt="drawing" width="220" height="130" />
+<img src="https://i.ibb.co/74WP9WR/2019-02-12-22-32-31.png" alt="drawing" width="550" height="325" />
 
-<img src="https://i.ibb.co/DCjcqmB/2019-02-12-22-31-26.png" alt="drawing" width="220" height="130" />
+<img src="https://i.ibb.co/DCjcqmB/2019-02-12-22-31-26.png" alt="drawing" width="550" height="325" />
 ### Size function
 ```octave
 A = [1 2; 3 4; 5 6]
