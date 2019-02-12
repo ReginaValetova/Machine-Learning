@@ -31,24 +31,38 @@ Output:
 ### Matrix operations:
 
  ```octave
- A = [1 2
-3 4
-5 6]
+A = [1 2; 3 4; 5 6]
+size(A) % ans: 3 2
+sz = size(A)
+size(sz) % ans: 1 2
+size(A,1) % ans: 3
+size(A,2) % ans: 2
+```
+Output: 
 
-v = [1 2 3]
+![Alt Text](https://i.ibb.co/hd79yrz/2019-02-12-23-08-18.png)
 
+```octave
+v = [1 2 3 4]
+length(v) % ans: 4
+length(A) % ans: 3 (A is a three by two matrix, the longer dimension is of size three)
+```
+Output: 
+
+![Alt Text](https://i.ibb.co/XYpnw23/2019-02-12-23-10-54.png)
+
+```octave
 v = 1:0.5:2
-
 v = 1:6
 
-ones(2,3)
-
-w = zeros(1,3)
-
-eye(3,3) % identity matrix
+ones = ones(2,3)
+zeros = zeros(1,3)
+Identity = eye(3,3) %Identity matrix
 ```
-Output:
-![Alt Text](https://i.ibb.co/B4SxwXY/2019-02-12-21-35-41.png)
+
+Output: 
+
+![Alt Text](https://i.ibb.co/5YyJh63/2019-02-12-23-11-06.png)
 
 Also Octave is able to built histograms:
 ```octave
