@@ -1,6 +1,6 @@
-#Octave tutorial
+# Octave tutorial
 
-###Basic operations
+### Basic operations
 
 ```octave
 5 + 6 % addition
