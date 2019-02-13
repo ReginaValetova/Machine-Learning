@@ -258,3 +258,47 @@ ls
 ![Alt Text](https://i.ibb.co/r6sy7vc/2019-02-13-0-14-29.png)
 
 ![Alt Text](https://i.ibb.co/wYLq503/2019-02-13-0-24-58.png)
+
+## Plotting Data
+### Plot creating
+
+```octave
+t = [0:0.01:0.98];
+y1 = sin(2*pi*4*t);
+plot(t,y1);
+hold on;
+y2 = cos(2*pi*4*t);
+plot(t,y2,'r');
+xlabel('time')
+ylabel('value')
+title('My plot')
+legend('sin','cos')
+```
+<img src="https://i.ibb.co/stwpNR9/plot.png" alt="drawing" width="500" height="300" />
+
+### Subplot
+```octave
+subplot(1,2,1); % Divides plot a 1x2 grid, access first element
+plot(t,y1);
+subplot(1,2,2);
+plot(t, y2,'r');
+axis([0.5 1 -1 1])
+```
+<img src="https://i.ibb.co/2vvCHQF/subplot-red.png" alt="drawing" width="500" height="200" />
+
+### Unique trait
+
+```octave
+imagesc(magic(15));
+```
+<img src="https://i.ibb.co/GRbpnXG/imagesc.png" alt="drawing" width="400" height="250" />
+
+```octave
+colorbar;
+```
+<img src="https://i.ibb.co/Vq96DxD/colorbar.png" alt="drawing" width="400" height="250" />
+
+```octave
+colormap gray;
+```
+<img src="https://i.ibb.co/QF1LfXX/colormap.png" alt="drawing" width="400" height="250" />
