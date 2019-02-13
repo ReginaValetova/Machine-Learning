@@ -302,3 +302,123 @@ colorbar;
 colormap gray;
 ```
 <img src="https://i.ibb.co/QF1LfXX/colormap.png" alt="drawing" width="400" height="250" />
+
+## Control Statements: for, while, if statement
+### For
+```octave
+v = zeros(10,1)
+v =
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+for i = 1:10,
+  v(i) = 2^i;
+  end;
+
+v
+v =
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+```
+### While
+First example:
+```octave
+i = 1;
+
+while i <=5;
+ v(i) = 100;
+ i = i + 1;
+       end;
+
+v
+v =
+    100
+    100
+    100
+    100
+    100
+     64
+    128
+    256
+    512
+   1024
+```
+Second example:
+```octave
+
+while true,
+ v(i) = 999;
+ i = i + 1;
+ if i == 6;
+     break;
+     end;
+ end;
+
+v
+v =
+    999
+    999
+    999
+    999
+    999
+     64
+    128
+    256
+    512
+   1024
+```
+### If
+
+```octave
+v(1) = 999;
+
+if v(1) == 1,
+    disp('The value is one');
+elseif v(1) == 2,
+disp('The value is two');
+else
+    disp('The value is not one or two.');
+    end;
+
+The value is not one or two.
+
+v(1) = 2
+v =
+
+      2
+    999
+    999
+    999
+    999
+     64
+    128
+    256
+    512
+   1024
+
+if v(1) == 1,
+    disp('The value is one');
+elseif v(1) == 2,
+    disp('The value is two');
+else
+    disp('The value is not one or two.');
+ end;
+
+The value is two 
+```
