@@ -33,7 +33,7 @@ ans = 0
 ans = 1
 
 xor(1,0)
-an = 1
+ans = 1
 ```
 
 ### Matrix operations:
